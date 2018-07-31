@@ -1,0 +1,49 @@
+<div>
+  <h2 *ngIf='continue'>
+
+    hello world
+  </h2>
+
+  <button (click)='Content()'>Click</button>
+
+</div>
+
+
+
+<div>
+
+
+  <ul>
+    <li *ngFor=" let name of names ">
+
+      {{name}}
+
+    </li> 
+     <br>
+    <li *ngFor="let employee of employees">
+      {{ employee.name}}
+
+      <p> 
+        
+        {{ employee.age}}
+
+      </p>
+
+  </ul>
+</div>
+
+<h4 *ngIf='show'>
+  gopikrishna
+</h4>
+<button (click)='shContent()'>Click</button>
+
+
+
+
+<h1 [ngClass]="callNgClass()" >
+    gopikrishna   ponnoju
+</h1>
+
+<div *ngIf='hide'> 
+</div>
+<button (click)='showContent()'>Click</button>
