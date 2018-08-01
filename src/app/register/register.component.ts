@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { Appservices } from '../app.services';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -13,15 +16,18 @@ export class RegisterComponent implements OnInit {
   public number: any;
   public user: any;
   public mobile: any;
-
   public continue: any;
-  
+  public userDetails: any;
 
-  constructor() { }
- 
+
+
+  constructor(private appService: Appservices,
+    private router: Router) { }
+
 
   ngOnInit() {
     // this.continue = "hello"
+
   }
 
 
@@ -45,12 +51,22 @@ export class RegisterComponent implements OnInit {
         password: this.password
       };
 
+      this.appService.register(this.user)
+        .subscribe(
+          (response) => {
+            this.userDetails = response;
+            if (this.userDetails.status) {
+              this.router.navigate(['/login'])
+            } else {
+              alert(this.userDetails.message);
+            }
+          }
+        )
 
 
 
     }
 
-  }
-  
 
+  }
 }

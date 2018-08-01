@@ -21,6 +21,7 @@ import { SignupComponent } from './signup/signup.component';
 import { Appservices } from './app.services';
 
 import { HttpClientModule } from '@angular/common/http';
+import { Section1Component } from './section1/section1.component';
 
 
 
@@ -66,6 +67,7 @@ const routes : Routes = [
     ServicesComponent,
     RegisterComponent,
     SignupComponent,
+    Section1Component,
     
     
   ],
