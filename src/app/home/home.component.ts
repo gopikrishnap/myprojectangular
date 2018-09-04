@@ -12,6 +12,9 @@ export class HomeComponent implements OnInit {
   public continue: any;
   public show: any;
   public hide: any;
+  public logo:any=[];
+  public logos: boolean=true;
+  public selectedlogo :any;
 
   public names = ['prabhas', 'mahesh', 'pavan'];
 
@@ -35,6 +38,13 @@ export class HomeComponent implements OnInit {
     this.continue = true;
     this.show =true;
     this.hide =true;
+
+
+
+
+       // this.continue="hello";
+this.logo = ["/assets/images/img1/Rohit-Sharma.jpg" , "/assets/images/img1/virat.jpg"];
+this.selectedlogo = this.logo[0];
   }
   Content() {
 
@@ -61,4 +71,11 @@ export class HomeComponent implements OnInit {
     }
 
   }
+
+
+
+  changelogos(){
+    this.logos = !this.logos;
+    this.selectedlogo = this.logos ? this.logo[0] : this.logo[1];
+    }
 }

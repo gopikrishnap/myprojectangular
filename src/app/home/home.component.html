@@ -46,4 +46,14 @@
 
 <div *ngIf='hide'> 
 </div>
+
 <button (click)='showContent()'>Click</button>
+
+<div>
+
+<img [src]="selectedlogo">
+<!-- here from the backend we are assigning the conditional expression for changing the logos by clicking the button -->
+</div>
+<div>
+<button (click)="changelogos()">click</button>
+</div>

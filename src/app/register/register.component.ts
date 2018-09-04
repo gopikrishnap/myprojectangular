@@ -30,10 +30,6 @@ export class RegisterComponent implements OnInit {
 
   }
 
-
-
-
-
   register() {
     if (!this.name) {
       alert("Please Enter Name");

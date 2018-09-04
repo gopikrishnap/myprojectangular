@@ -18,8 +18,8 @@ import { Appservices } from './app.services';
 import { HttpClientModule } from '@angular/common/http';
 
 import { FooterComponent } from './footer/footer.component';
-import { DynamicComponent } from './about-us/dynamic/dynamic.component';//don't add this servicesmodule(from services.module.ts(export class name))
-import { ServicesModule } from './services/services.module';
+import { DynamicComponent } from './about-us/dynamic/dynamic.component';
+import { ServicesModule } from './services/services.module'////don't add this servicesmodule(from services.module.ts(export class name))
 import { ImageCarouselComponent } from './image-carousel/image-carousel.component';
 
 
@@ -63,6 +63,7 @@ const routes: Routes = [
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    
   ],
 
 
